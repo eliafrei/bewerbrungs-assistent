@@ -3,3 +3,4 @@ venv/
 __pycache__/
 *.pyc
 profile.py
+.streamlit/secrets.toml

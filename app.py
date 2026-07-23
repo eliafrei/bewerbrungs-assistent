@@ -1,13 +1,11 @@
 import streamlit as st
 import anthropic
-from dotenv import load_dotenv
-from profile import MEIN_PROFIL
-
-load_dotenv()
-
-client = anthropic.Anthropic()
 
 st.title("Bewerbungsassistent Elia Frei")
+
+client = anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
+MEIN_PROFIL = st.secrets["MEIN_PROFIL"]
+
 
 if "verlauf" not in st.session_state:
     st.session_state.verlauf = []
